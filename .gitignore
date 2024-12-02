@@ -1,4 +1,6 @@
 main
 *.png
 *.txt
+*.zip
+*.7z
 
