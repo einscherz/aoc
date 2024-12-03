@@ -5,9 +5,9 @@ ans1=0
 ans2=0
 for i in range(len(inp)):
     if inp[:i].endswith('do()'):
-        do = True
+        do=True
     elif inp[:i].endswith("don't()"):
-        do = False
+        do=False
     if inp[:i].endswith('mul('):
         try:
             a=list(map(int,inp[i:inp.index(')',i)].split(',')))

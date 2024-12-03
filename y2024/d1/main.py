@@ -1,6 +1,6 @@
 from collections import defaultdict
 import sys
-inp = sys.stdin.read().strip()
+inp=sys.stdin.read().strip()
 a=[]
 b=[]
 for x in inp.split('\n'):
