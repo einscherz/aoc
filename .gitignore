@@ -1,4 +1,6 @@
 main
+stupid*.py
+bup*.py
 *.png
 *.txt
 *.zip
