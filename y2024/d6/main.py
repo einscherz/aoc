@@ -46,6 +46,8 @@ while True:
             continue
         wiring=comp_wiring(nx,ny)
         v=wiring[[(0,-1),(1,0),(0,1),(-1,0)].index((dx,dy))]
+        if v==1277:
+            print(dx,dy)
         if v==-1:
             continue
         mods=[]
