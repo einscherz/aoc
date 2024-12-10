@@ -20,7 +20,7 @@ ans1=0
 for i in range(R):
     for j in range(C):
         if grid[i][j]=='0':
-            reach=set()
+            reach.clear()
             dfs(j,i)
             ans1+=len(reach)
 print(ans1,ans2)
