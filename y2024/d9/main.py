@@ -56,7 +56,7 @@ for i in range(len(b[0])-1,-1,-1):
     hi=len(b[1])
     while lo+1<hi:
         mid=(lo+hi)//2
-        if (b[0][i][1]-b[0][i][0]+1)<=seg.range_query(0,mid-1):
+        if b[0][i][1]-b[0][i][0]+1<=seg.range_query(0,mid-1):
             hi=mid
         else:
             lo=mid
