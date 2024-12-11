@@ -11,7 +11,7 @@ for i in range(75):
     if i==25:
         ans1=sum(dp.values())
     ndp=defaultdict(lambda *x:0)
-    ndp[1]+=dp[0]
+    ndp[1]=dp[0]
     for x in dp:
         if not x:
             continue
