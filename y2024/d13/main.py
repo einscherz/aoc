@@ -1,8 +1,6 @@
 import re
 import sys
 inp=sys.stdin.read().strip()
-def getnums(s):
-    return list(map(int,re.findall(r'\d+',s)))
 def solve(a):
     n1,d1=a[3]*a[4]-a[2]*a[5],a[0]*a[3]-a[1]*a[2]
     assert(d1)
@@ -16,7 +14,7 @@ def solve(a):
     return 3*t+n2//d2
 ans=[0,0]
 for x in inp.split('\n\n'):
-    a=getnums(x)
+    a=list(map(int,re.findall(r'\d+',x)))
     ans=[ans[i]+solve(a[:4]+[10000000000000*i+a[j] for j in range(4,6)]) for i in range(2)]
 print(ans[0],ans[1])
 
