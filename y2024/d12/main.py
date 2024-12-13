@@ -10,7 +10,6 @@ for i in range(R):
         if vis[i][j]:
             continue
         region=set()
-        borders=set()
         st=[(j,i)]
         while len(st):
             x,y=st.pop()
@@ -23,6 +22,7 @@ for i in range(R):
                 st.append((x+dx,y+dy))
                 dx,dy=dy,-dx
         t=0
+        borders=set()
         for x,y in region:
             v1,v2=1,1
             for k in range(8):
