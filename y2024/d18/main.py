@@ -4,8 +4,7 @@ from collections import deque
 sign=lambda x:(x>0)-(x<0)
 inp=sys.stdin.read().strip()
 order=list(map(lambda x:tuple(map(int,x.split(','))),inp.split('\n')))
-#R,C=71,71
-R,C=5000,5000
+R,C=71,71
 corr=[[math.inf]*C for i in range(R)]
 for i,(x,y) in enumerate(order):
     corr[y][x]=i
