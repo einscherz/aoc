@@ -20,11 +20,9 @@ for (cx,cy) in [(sx,sy),(ex,ey)]:
     q.append((0,cx,cy))
     while len(q):
         d,x,y=q.popleft()
-        if dist[-1][y][x]<=d:
+        if grid[y][x]=='#' or dist[-1][y][x]<=d:
             continue
         dist[-1][y][x]=d
-        if grid[y][x]=='#':
-            continue
         dx,dy=1,0
         for i in range(4):
             q.append((d+1,x+dx,y+dy))
