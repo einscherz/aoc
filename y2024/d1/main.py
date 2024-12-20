@@ -9,7 +9,7 @@ for x in inp.split('\n'):
     b.append(t[1])
 a.sort()
 b.sort()
-m=defaultdict(lambda *x:[0,0])
+m=defaultdict(lambda:[0,0])
 ans1=0
 for i in range(len(a)):
     ans1+=abs(a[i]-b[i])

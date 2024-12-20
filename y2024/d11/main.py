@@ -3,14 +3,14 @@ from collections import defaultdict
 import sys
 inp=sys.stdin.read().strip()
 a=list(map(int,inp.split()))
-dp=defaultdict(lambda *x:0)
+dp=defaultdict(int)
 for x in a:
     dp[x]+=1
 ans1=0
 for i in range(75):
     if i==25:
         ans1=sum(dp.values())
-    ndp=defaultdict(lambda *x:0)
+    ndp=defaultdict(int)
     ndp[1]=dp[0]
     for x in dp:
         if not x:
