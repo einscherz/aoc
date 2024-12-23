@@ -13,7 +13,7 @@ for x in inp.split('\n'):
 ans1=sum([u in AL[v] and u in AL[w] and v in AL[w] and any(map(lambda x:x[0]=='t',[u,v,w])) for u,v,w in itertools.product(vertices,repeat=3)])//6
 best=[]
 for u in vertices:
-    for i in range(1,1<<len(AL[u])):
+    for i in range(1<<len(AL[u])):
         if i.bit_count()<len(best):
             continue
         subs=set(map(lambda x:x[1],filter(lambda x:(i>>x[0])&1,enumerate(AL[u]))))
