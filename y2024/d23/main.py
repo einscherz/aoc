@@ -2,17 +2,14 @@ import itertools
 import sys
 from collections import defaultdict
 inp=sys.stdin.read().strip()
-vertices=set()
 AL=defaultdict(set)
 for x in inp.split('\n'):
     u,v=x.split('-')
-    vertices.add(u)
-    vertices.add(v)
     AL[u].add(v)
     AL[v].add(u)
-ans1=sum([u in AL[v] and u in AL[w] and v in AL[w] and any(map(lambda x:x[0]=='t',[u,v,w])) for u,v,w in itertools.product(vertices,repeat=3)])//6
+ans1=sum([u in AL[v] and u in AL[w] and v in AL[w] and any(map(lambda x:x[0]=='t',[u,v,w])) for u,v,w in itertools.product(AL,repeat=3)])//6
 best=[]
-for u in vertices:
+for u in AL:
     for i in range(1<<len(AL[u])):
         if i.bit_count()<len(best):
             continue
